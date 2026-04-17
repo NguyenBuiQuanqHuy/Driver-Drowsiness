@@ -1,116 +1,105 @@
 import cv2
 import mediapipe as mp
+import numpy as np
 
-from config import *
-from eye import process_eye
-from mouth import mouth_aspect_ratio
-
+mp_drawing = mp.solutions.drawing_utils
+mp_drawing_styles = mp.solutions.drawing_styles
 mp_face_mesh = mp.solutions.face_mesh
 
-video_path = r"C:\Users\huybu\Downloads\7702109485658.mp4"
-cap = cv2.VideoCapture(video_path)
+from g_helper import bgr2rgb, rgb2bgr, mirrorImage
+from head_pose import pipelineHeadTiltPose, draw_face_bbox_fp
 
+# ===== IMPORT THÊM =====
+from eye import process_eye_state
+from mouth import process_mouth_state
+from config import *
+
+# ===== VIDEO FILE =====
+cap = cv2.VideoCapture(r"C:\Users\huybu\Downloads\7702109485658.mp4")  # đổi đường dẫn tại đây
+
+# ===== BIẾN TIME =====
 fps = cap.get(cv2.CAP_PROP_FPS)
 if fps == 0:
     fps = 25
 
 frame_time = 1 / fps
-delay = int(1000 / fps)
 
 eye_closed_time = 0
 mouth_open_time = 0
 
 with mp_face_mesh.FaceMesh(
-        static_image_mode=False,
         max_num_faces=1,
         refine_landmarks=True,
-        min_detection_confidence=0.7,
-        min_tracking_confidence=0.8) as face_mesh:
-    prev_landmarks = None 
+        min_detection_confidence=0.5,
+        min_tracking_confidence=0.5) as face_mesh:
+
     while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            break
+        success, image = cap.read()
 
-        h, w = frame.shape[:2]
+        # ===== HẾT VIDEO =====
+        if not success:
+            break   # hoặc: cap.set(cv2.CAP_PROP_POS_FRAMES, 0); continue
 
-        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        frame_rgb.flags.writeable = False
+        # Mirror image (Optional)
+        image = mirrorImage(image)
 
-        results = face_mesh.process(frame_rgb)
+        # Generate face mesh
+        results = face_mesh.process(bgr2rgb(image))
 
-        frame_rgb.flags.writeable = True
-
-        microsleep_alert = False
+        # ===== RESET ALERT =====
         drowsy_alert = False
         yawn_alert = False
 
+        # Processing Face Landmarks
         if results.multi_face_landmarks:
-            lm = results.multi_face_landmarks[0]
+            for face_landmarks in results.multi_face_landmarks:
 
-            # ===== MẮT =====
-            ear_left = process_eye(frame, lm,
-                                   [33,160,158,133,153,144],
-                                   w, h, (0,255,0))
+                img_h, img_w, _ = image.shape
 
-            ear_right = process_eye(frame, lm,
-                                    [362,385,387,263,373,380],
-                                    w, h, (255,0,0))
+                # FACE BOX
+                draw_face_bbox_fp(image, face_landmarks, img_w, img_h)
 
-            ear_avg = (ear_left + ear_right) / 2
+                # HEAD POSE
+                head_tilt_pose = pipelineHeadTiltPose(image, face_landmarks)
 
-            if ear_avg < EYE_CLOSED_THRESHOLD:
-                eye_closed_time += frame_time
-            else:
-                eye_closed_time = 0
+                # ===== MẮT =====
+                eye_closed_time, drowsy_alert = process_eye_state(
+                    image, face_landmarks, img_w, img_h,
+                    eye_closed_time, frame_time,
+                    EYE_CLOSED_THRESHOLD, DROWSY_EYE_TIME
+                )
 
-            # ===== MIỆNG =====
-            mar, mouth_pts = mouth_aspect_ratio(lm, w, h)
+                # ===== MIỆNG =====
+                mouth_open_time, yawn_alert = process_mouth_state(
+                    image, face_landmarks, img_w, img_h,
+                    mouth_open_time, frame_time,
+                    MAR_THRESHOLD, YAWN_TIME
+                )
 
-            # BOX MIỆNG
-            xs = [p[0] for p in mouth_pts]
-            ys = [p[1] for p in mouth_pts]
-            cv2.rectangle(frame, (min(xs), min(ys)),
-                          (max(xs), max(ys)), (0,0,255), 2)
+        # ===== HIỂN THỊ TRẠNG THÁI =====
+        h, w, _ = image.shape
+        y_base = h - 30
 
-            if mar > MAR_THRESHOLD:
-                mouth_open_time += frame_time
-            else:
-                mouth_open_time = 0
-
-            # ===== LOGIC =====
-            if eye_closed_time > DROWSY_EYE_TIME:
-                drowsy_alert = True
-
-            if mouth_open_time > YAWN_TIME:
-                yawn_alert = True
-
-            # ===== HIỂN THỊ DEBUG (GIỮ NGUYÊN) =====
-            cv2.putText(frame, f"EAR: {ear_avg:.2f}", (30,200),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,255), 2)
-
-            cv2.putText(frame, f"MAR: {mar:.2f}", (30,230),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,255,0), 2)
-
-            cv2.putText(frame, f"EyeTime: {eye_closed_time:.2f}s", (30,260),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,255), 2)
-
-        # ===== CẢNH BÁO =====
+        # BUỒN NGỦ (dòng dưới)
         if drowsy_alert:
-            cv2.putText(frame, "BUON NGU", (50,50),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 3)
+            cv2.putText(image, "BUON NGU", (30, y_base),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0,0,255), 3)
 
+        # NGÁP (dòng trên)
         if yawn_alert:
-            cv2.putText(frame, "NGAP", (50,100),  # 👈 xuống dưới
-                        cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255,0,255), 3)
+            cv2.putText(image, "NGAP", (30, y_base - 50),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255,0,255), 3)
 
+        # BÌNH THƯỜNG
         if not drowsy_alert and not yawn_alert:
-            cv2.putText(frame, "TINH TAO", (50,50),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,255,0), 3)
+            cv2.putText(image, "TINH TAO", (30, y_base),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0,255,0), 3)
 
-        cv2.imshow("Microsleep Detection", frame)
+        # ===== HIỂN THỊ =====
+        cv2.imshow('Face Mesh', image)
 
-        if cv2.waitKey(delay) & 0xFF == ord('q'):
+        # giữ đúng fps video
+        if cv2.waitKey(int(1000 / fps)) & 0xFF == ord('q'):
             break
 
 cap.release()
