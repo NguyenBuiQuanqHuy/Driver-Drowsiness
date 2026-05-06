@@ -1,0 +1,39 @@
+@startuml
+title Driver Drowsiness Detection System - Component Diagram
+
+package "Input Layer" {
+    [Camera]
+}
+
+package "Processing Layer" {
+    [Face Detection (FaceMesh)]
+    [Landmark Detection]
+    [Eye Analysis (EAR)]
+    [Mouth Analysis (MAR)]
+    [Head Pose Estimation]
+    [Fatigue Detection]
+    [Decision Engine]
+}
+
+package "Output Layer" {
+    [Alert System]
+    [User Interface]
+}
+
+[Camera] --> [Face Detection (FaceMesh)]
+[Face Detection (FaceMesh)] --> [Landmark Detection]
+
+[Landmark Detection] --> [Eye Analysis (EAR)]
+[Landmark Detection] --> [Mouth Analysis (MAR)]
+[Landmark Detection] --> [Head Pose Estimation]
+
+[Eye Analysis (EAR)] --> [Fatigue Detection]
+[Mouth Analysis (MAR)] --> [Fatigue Detection]
+[Head Pose Estimation] --> [Fatigue Detection]
+
+[Fatigue Detection] --> [Decision Engine]
+
+[Decision Engine] --> [Alert System]
+[Decision Engine] --> [User Interface]
+
+@enduml
