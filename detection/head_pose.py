@@ -10,6 +10,9 @@ prev_time = time.time()
 # Biến lưu tổng thời gian cúi đầu liên tục
 down_time = 0
 
+# Thời gian mất tập trung
+distract_time = 0
+
 # Khởi tạo các module của mediapipe
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -159,7 +162,7 @@ def draw_head_tilt_angle_fp(image, x, y, z):
 # PIPELINE CHÍNH
 # ==============================
 def pipelineHeadTiltPose(image, face_landmarks):
-    global prev_time, down_time
+    global prev_time, down_time, distract_time
 
     # Lấy kích thước ảnh
     img_h, img_w, img_c = image.shape
@@ -189,6 +192,14 @@ def pipelineHeadTiltPose(image, face_landmarks):
     else:
         down_time = 0  # reset nếu ngẩng lên
 
+    # =========================
+    # DISTRACTED (KHÔNG NHÌN TRƯỚC)
+    # =========================
+    if head_pose in ["Left", "Right", "Up"]:
+        distract_time += dt
+    else:
+        distract_time = 0    
+
     # ==============================
     # PHÂN MỨC CẢNH BÁO
     # ==============================
@@ -196,8 +207,8 @@ def pipelineHeadTiltPose(image, face_landmarks):
         alert = "MICROSLEEP"
     # elif down_time > DROWSY_TIME:
     #     alert = "DROWSY"
-    # elif down_time > WARNING_TIME:
-    #     alert = "WARNING"
+    elif distract_time > DISTRACTED_TIME:   # 3 giây không nhìn phía trước
+        alert = "DISTRACTED"
     else:
         alert = ""
 
@@ -207,4 +218,4 @@ def pipelineHeadTiltPose(image, face_landmarks):
     draw_nose_projection_fp(image, x, y, nose_2d, nose_3d,
                             rot_vec, trans_vec, cam_matrix, dist_matrix)
 
-    return head_pose, alert, x, y, z, down_time
+    return head_pose, alert, x, y, z, down_time, distract_time

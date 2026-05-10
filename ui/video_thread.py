@@ -89,7 +89,7 @@ class VideoThread(QThread):
 
                         draw_face_bbox_fp(frame, face_landmarks, w, h)
 
-                        head_pose, head_alert, x, y, z, head_time = pipelineHeadTiltPose(
+                        head_pose, head_alert, x, y, z, head_time, distract_time = pipelineHeadTiltPose(
                             frame, face_landmarks
                         )
 
@@ -116,6 +116,7 @@ class VideoThread(QThread):
                     eye_closed_time = 0
                     mouth_open_time = 0
                     head_time = 0
+                    distract_time = 0
 
                 self.data_signal.emit({
                     "ear": round(EAR, 2),
@@ -132,6 +133,7 @@ class VideoThread(QThread):
                     "head": head_pose,
                     "head_alert": head_alert,
                     "head_time": round(head_time, 2),
+                    "focus_time": distract_time,
 
                     "x": round(x, 2),
                     "y": round(y, 2),

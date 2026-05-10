@@ -1,6 +1,7 @@
 # layout.py
 from PyQt5.QtWidgets import *
 from .history.history_window import HistoryWindow
+from .performance.performance_window import PerformanceWindow
 
 
 def build_right_panel(app):
@@ -40,10 +41,12 @@ def build_left_stack(app):
     # ===== HISTORY VIEW =====
 
     app.history_view = HistoryWindow()
+    app.performance_view = PerformanceWindow()
 
     # add vào stack
-    app.stack.addWidget(camera_widget)      # index 0
-    app.stack.addWidget(app.history_view)   # index 1
+    app.stack.addWidget(camera_widget)        # 0
+    app.stack.addWidget(app.history_view)     # 1
+    app.stack.addWidget(app.performance_view) # 2
 
     # wrap lại
     container = QWidget()

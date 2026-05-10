@@ -25,4 +25,5 @@ HEAD_RIGHT_THRESHOLD = 15    # quay phải (y > 15)
 # WARNING_TIME = 1.0       # cảnh báo nhẹ
 # DROWSY_TIME = 2.0        # buồn ngủ
 MICROSLEEP_TIME = 2.0    # microsleep
+DISTRACTED_TIME = 2.0
 

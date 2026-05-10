@@ -66,6 +66,10 @@ class App(QWidget):
 
         self.btn_history.clicked.connect(self.toggle_history)
 
+        self.btn_performance.clicked.connect(
+            self.toggle_performance
+        )
+
         self.voice = Voice()
 
         # ===== ALERT CONTROL =====
@@ -119,7 +123,32 @@ class App(QWidget):
             self.btn_history.setText("⬅ Back")
         else:
             self.stack.setCurrentIndex(0)
-            self.btn_history.setText("📊 Alert History")             
+            self.btn_history.setText("📊 Alert History")   
+
+    def toggle_performance(self):
+
+        # chưa ở performance
+        if self.stack.currentIndex() != 2:
+
+            # load dữ liệu dashboard
+            self.performance_view.load_data()
+
+            # chuyển sang performance screen
+            self.stack.setCurrentIndex(2)
+
+            # đổi text button
+            self.btn_performance.setText("⬅ Back")
+
+            # reset text history
+            self.btn_history.setText("📊 Alert History")
+
+        else:
+
+            # quay lại camera
+            self.stack.setCurrentIndex(0)
+
+            # restore text
+            self.btn_performance.setText("📈 Performance")          
 
     def closeEvent(self, event):
         self.thread.stop()

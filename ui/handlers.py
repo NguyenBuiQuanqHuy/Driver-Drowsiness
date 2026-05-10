@@ -32,7 +32,17 @@ def update_info(app, data):
     if data["head_alert"]:
         app.lbl_head.setText(data["head"])
     app.lbl_head.setText(head_text)
-    app.lbl_head_time.setText(f"{round(data.get('head_time',0),1)} s")
+    
+    if data["head"] == "Down":
+        head_timer = data.get("head_time", 0)
+
+    elif data["head"] in ["Left", "Right", "Up"]:
+        head_timer = data.get("focus_time", 0)
+
+    else:
+        head_timer = 0
+
+    app.lbl_head_time.setText(f"{round(head_timer,1)} s")
 
     if data["ear_time"] > DROWSY_EYE_TIME:
         app.lbl_ear_time.setStyleSheet("color: red; font-size: 18px; font-weight: bold;")
@@ -44,7 +54,12 @@ def update_info(app, data):
     else:
         app.lbl_mar_time.setStyleSheet("color: white; font-size: 18px; font-weight: bold;")
 
-    if data["head_time"] > MICROSLEEP_TIME:
+    if (
+        (data["head"] == "Down" and data["head_time"] > MICROSLEEP_TIME)
+        or
+        (data["head"] in ["Left", "Right", "Up"]
+        and data.get("focus_time", 0) > DISTRACTED_TIME)
+    ):
         app.lbl_head_time.setStyleSheet("color: red; font-size: 18px; font-weight: bold;")
     else:
         app.lbl_head_time.setStyleSheet("color: white; font-size: 18px; font-weight: bold;")
@@ -111,7 +126,8 @@ def update_info(app, data):
         level = 2
     elif (
         data["eye_time"] > DROWSY_EYE_TIME or
-        data.get("yawn_alert", False)
+        data.get("yawn_alert", False) or
+        data.get("focus_time", 0) > DISTRACTED_TIME
     ):
         level = 1
 
@@ -173,6 +189,20 @@ def update_info(app, data):
                 background-color: #ffcc00;
                 border: 3px solid yellow;
                 color: black;
+                padding: 15px;
+                font-size: 22px;
+                font-weight: bold;
+            """)
+        
+        elif data.get("focus_time", 0) > DISTRACTED_TIME :
+            if app.voice.speak_warning("Please focus on the road!"):
+                save_alert("DISTRACTED", data)
+
+            app.lbl_status.setText("DISTRACTED ⚠️")
+            app.lbl_status.setStyleSheet("""
+                background-color: #0066cc;
+                border: 3px solid cyan;
+                color: white;
                 padding: 15px;
                 font-size: 22px;
                 font-weight: bold;

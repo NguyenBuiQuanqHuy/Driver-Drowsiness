@@ -18,7 +18,8 @@ class HistoryWindow(QWidget):
             "ALL",
             "MICROSLEEP",
             "EYES CLOSED",
-            "YAWN"
+            "YAWN",
+            "DISTRACTED"
         ])
         self.filter_type.currentTextChanged.connect(self.apply_filter)
 
@@ -166,6 +167,9 @@ class HistoryWindow(QWidget):
             elif alert_type == "YAWN":
                 color = "#f1c40f"
                 text_color = "black"
+            elif alert_type == "DISTRACTED":
+                color = "#0066cc"
+                text_color = "white"         
             else:
                 continue
 
