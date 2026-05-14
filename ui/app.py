@@ -1,4 +1,3 @@
-# app.py
 import cv2
 from config.config import *
 from PyQt5.QtWidgets import *
@@ -11,7 +10,9 @@ from .styles import MAIN_STYLE, STATUS_DEFAULT
 from .components import create_box
 from .layout import build_right_panel, build_buttons, build_left_stack
 from .handlers import update_image, update_info
+
 from .history.history_window import HistoryWindow
+from .performance.performance_window import PerformanceWindow
 
 
 class App(QWidget):
@@ -41,10 +42,25 @@ class App(QWidget):
         right_panel = build_right_panel(self)
         settings_layout, control_layout = build_buttons(self)
 
-        left_panel = build_left_stack(self)
+        camera_widget = build_left_stack(self)
+
+        # =========================
+        # STACK FIX (QUAN TRỌNG)
+        # =========================
+        self.stack = QStackedWidget()
+
+        self.camera_view = camera_widget
+        self.history_view = HistoryWindow()
+        self.performance_view = PerformanceWindow()
+
+        self.stack.addWidget(self.camera_view)        # index 0
+        self.stack.addWidget(self.history_view)       # index 1
+        self.stack.addWidget(self.performance_view)   # index 2
+
+        self.stack.setCurrentIndex(0)
 
         main_layout = QHBoxLayout()
-        main_layout.addWidget(left_panel, 3)
+        main_layout.addWidget(self.stack, 3)
         main_layout.addWidget(right_panel, 1)
 
         layout = QVBoxLayout()
@@ -53,35 +69,38 @@ class App(QWidget):
         layout.addLayout(control_layout)
         self.setLayout(layout)
 
+        # =========================
+        # THREAD
+        # =========================
         self.thread = VideoThread()
         self.is_paused = False
 
         self.thread.change_pixmap_signal.connect(lambda img: update_image(self, img))
         self.thread.data_signal.connect(lambda data: update_info(self, data))
 
+        # =========================
+        # BUTTONS
+        # =========================
         self.btn_camera.clicked.connect(self.start_camera)
         self.btn_video.clicked.connect(self.open_file)
         self.btn_stop.clicked.connect(self.toggle_pause)
-        self.btn_stop.setText("⏸ Pause")
 
         self.btn_history.clicked.connect(self.toggle_history)
-
-        self.btn_performance.clicked.connect(
-            self.toggle_performance
-        )
+        self.btn_performance.clicked.connect(self.toggle_performance)
 
         self.voice = Voice()
 
-        # ===== ALERT CONTROL =====
+        # ALERT
         self.last_alert_type = None
         self.last_alert_time = 0
         self.last_voice_time = 0
 
+    # =========================
+    # CAMERA
+    # =========================
     def start_camera(self):
-    # chuyển về camera view nếu đang ở history
-        if hasattr(self, "stack"):
-            self.stack.setCurrentIndex(0)
-            self.btn_history.setText("📊 Alert History")
+        self.stack.setCurrentIndex(0)
+        self.btn_history.setText("📊 Alert History")
 
         self.thread.stop()
         self.thread.start_camera()
@@ -89,19 +108,15 @@ class App(QWidget):
     def open_file(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Chọn video")
         if file_path:
-            # chuyển về camera view
-            if hasattr(self, "stack"):
-                self.stack.setCurrentIndex(0)
-                self.btn_history.setText("📊 Alert History")
+            self.stack.setCurrentIndex(0)
+            self.btn_history.setText("📊 Alert History")
 
             self.thread.stop()
             self.thread.start_video(file_path)
 
-    def stop_video(self):
-        self.thread.stop()
-        self.is_paused = False
-        self.btn_stop.setText("⏸ Pause")
-
+    # =========================
+    # PAUSE
+    # =========================
     def toggle_pause(self):
         if not self.thread._run_flag:
             return
@@ -113,43 +128,41 @@ class App(QWidget):
         else:
             self.thread.resume()
             self.btn_stop.setText("⏸ Pause")
-            self.is_paused = False  
+            self.is_paused = False
 
+    # =========================
+    # HISTORY (FIX INDEX)
+    # =========================
     def toggle_history(self):
-    # đang ở camera
+
         if self.stack.currentIndex() == 0:
             self.history_view.load_data()
             self.stack.setCurrentIndex(1)
             self.btn_history.setText("⬅ Back")
         else:
             self.stack.setCurrentIndex(0)
-            self.btn_history.setText("📊 Alert History")   
+            self.btn_history.setText("📊 Alert History")
 
+    # =========================
+    # PERFORMANCE (FIX CRASH + INDEX)
+    # =========================
     def toggle_performance(self):
 
-        # chưa ở performance
         if self.stack.currentIndex() != 2:
 
-            # load dữ liệu dashboard
             self.performance_view.load_data()
-
-            # chuyển sang performance screen
             self.stack.setCurrentIndex(2)
 
-            # đổi text button
             self.btn_performance.setText("⬅ Back")
-
-            # reset text history
             self.btn_history.setText("📊 Alert History")
 
         else:
-
-            # quay lại camera
             self.stack.setCurrentIndex(0)
+            self.btn_performance.setText("📈 Performance")
 
-            # restore text
-            self.btn_performance.setText("📈 Performance")          
-
+    # =========================
+    # CLOSE
+    # =========================
     def closeEvent(self, event):
         self.thread.stop()
         event.accept()
