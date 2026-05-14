@@ -1,30 +1,37 @@
 [
     {
-        "time": "2026-05-10 20:04:30",
-        "type": "MICROSLEEP",
-        "ear": 0.12,
+        "time": "2026-05-13 21:00:10",
+        "type": "EYES CLOSED",
+        "ear": 0.06,
         "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-13 21:00:14",
+        "type": "MICROSLEEP",
+        "ear": 0.22,
+        "mar": 0.02,
         "head": "Down"
     },
     {
-        "time": "2026-05-10 20:04:37",
-        "type": "EYES CLOSED",
-        "ear": 0.08,
-        "mar": 0.01,
-        "head": "Forward"
+        "time": "2026-05-13 21:00:28",
+        "type": "DISTRACTED",
+        "ear": 0.26,
+        "mar": 0.0,
+        "head": "Up"
     },
     {
-        "time": "2026-05-10 20:04:41",
-        "type": "EYES CLOSED",
-        "ear": 0.12,
-        "mar": 0.01,
-        "head": "Forward"
+        "time": "2026-05-13 21:00:31",
+        "type": "DISTRACTED",
+        "ear": 0.26,
+        "mar": 0.0,
+        "head": "Up"
     },
     {
-        "time": "2026-05-10 20:04:45",
-        "type": "EYES CLOSED",
-        "ear": 0.12,
-        "mar": 0.01,
-        "head": "Forward"
+        "time": "2026-05-13 21:00:34",
+        "type": "DISTRACTED",
+        "ear": 0.16,
+        "mar": 0.0,
+        "head": "Up"
     }
 ]

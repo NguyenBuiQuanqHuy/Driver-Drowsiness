@@ -20,7 +20,6 @@ def update_image(app, cv_img):
         )
     )
 
-
 def update_info(app, data):
     app.lbl_ear.setText(str(data["ear"]))
     app.lbl_ear_time.setText(f"{round(data.get('ear_time',0),1)} s")

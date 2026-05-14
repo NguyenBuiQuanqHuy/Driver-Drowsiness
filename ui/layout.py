@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import *
 from .history.history_window import HistoryWindow
 from .performance.performance_window import PerformanceWindow
 
-
 def build_right_panel(app):
     """
     Panel bên phải (EAR, MAR, HEAD, STATUS)

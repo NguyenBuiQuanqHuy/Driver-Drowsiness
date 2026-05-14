@@ -2,10 +2,14 @@
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from PyQt5.QtGui import *
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
+
+import numpy as np
+
+from .evaluator import PerformanceEvaluator
+from .metrics import MetricsCalculator
 
 
 class PerformanceWindow(QWidget):
@@ -13,48 +17,44 @@ class PerformanceWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        # =========================================
-        # MAIN LAYOUT
-        # =========================================
+        self.labels = [
+            "AWAKE",
+            "YAWN",
+            "EYES CLOSED",
+            "MICROSLEEP",
+            "DISTRACTED"
+        ]
+
+        self.metrics_data = None
+
+        self.init_ui()
+
+    # ==================================================
+    # UI
+    # ==================================================
+
+    def init_ui(self):
+
         main_layout = QVBoxLayout()
 
-        # =========================================
+        # ==================================================
         # TITLE
-        # =========================================
-        #
-        # Màn hình đánh giá hiệu suất hệ thống
-        # Driver Drowsiness Detection
-        #
-        # =========================================
+        # ==================================================
 
-        title = QLabel("Performance Evaluation")
+        title = QLabel("System Performance Evaluation")
+
         title.setAlignment(Qt.AlignCenter)
 
         title.setStyleSheet("""
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
             color: white;
             padding: 10px;
         """)
 
-        # =========================================
-        # CLASSIFICATION METRICS
-        # =========================================
-        #
-        # Accuracy:
-        #   Độ chính xác tổng thể
-        #
-        # Precision:
-        #   Trong các cảnh báo hệ thống đưa ra,
-        #   bao nhiêu cảnh báo là đúng
-        #
-        # Recall:
-        #   Khả năng phát hiện đúng trạng thái buồn ngủ
-        #
-        # F1-score:
-        #   Cân bằng giữa Precision và Recall
-        #
-        # =========================================
+        # ==================================================
+        # OVERALL METRICS
+        # ==================================================
 
         metrics_layout = QGridLayout()
 
@@ -78,86 +78,91 @@ class PerformanceWindow(QWidget):
             "0%"
         )
 
+        self.card_fps = self.create_card(
+            "AVG FPS",
+            "0"
+        )
+
+        self.card_latency = self.create_card(
+            "AVG LATENCY",
+            "0 ms"
+        )
+
         metrics_layout.addWidget(self.card_accuracy, 0, 0)
         metrics_layout.addWidget(self.card_precision, 0, 1)
-        metrics_layout.addWidget(self.card_recall, 1, 0)
-        metrics_layout.addWidget(self.card_f1, 1, 1)
+        metrics_layout.addWidget(self.card_recall, 0, 2)
 
-        # =========================================
-        # CONFUSION MATRIX STATS
-        # =========================================
-        #
-        # TP (True Positive):
-        #   Detect đúng buồn ngủ
-        #
-        # FP (False Positive):
-        #   Báo động giả
-        #
-        # FN (False Negative):
-        #   Bỏ sót buồn ngủ
-        #
-        # TN (True Negative):
-        #   Detect đúng trạng thái bình thường
-        #
-        # =========================================
+        metrics_layout.addWidget(self.card_f1, 1, 0)
+        metrics_layout.addWidget(self.card_fps, 1, 1)
+        metrics_layout.addWidget(self.card_latency, 1, 2)
 
-        confusion_layout = QGridLayout()
+        # ==================================================
+        # TABLE
+        # ==================================================
 
-        self.card_tp = self.create_card(
-            "TRUE POSITIVE",
-            "0"
+        self.table = QTableWidget()
+
+        self.table.setColumnCount(5)
+
+        self.table.setHorizontalHeaderLabels([
+            "STATE",
+            "PRECISION",
+            "RECALL",
+            "F1-SCORE",
+            "SUPPORT"
+        ])
+
+        self.table.horizontalHeader().setSectionResizeMode(
+            QHeaderView.Stretch
         )
 
-        self.card_fp = self.create_card(
-            "FALSE POSITIVE",
-            "0"
-        )
+        self.table.setStyleSheet("""
+            QTableWidget{
+                background-color: #1c2541;
+                color: white;
+                gridline-color: #3a506b;
+                font-size: 13px;
+            }
 
-        self.card_fn = self.create_card(
-            "FALSE NEGATIVE",
-            "0"
-        )
+            QHeaderView::section{
+                background-color: #3a506b;
+                color: white;
+                padding: 5px;
+                border: none;
+                font-weight: bold;
+            }
+        """)
 
-        self.card_tn = self.create_card(
-            "TRUE NEGATIVE",
-            "0"
-        )
-
-        confusion_layout.addWidget(self.card_tp, 0, 0)
-        confusion_layout.addWidget(self.card_fp, 0, 1)
-        confusion_layout.addWidget(self.card_fn, 1, 0)
-        confusion_layout.addWidget(self.card_tn, 1, 1)
-
-        # =========================================
+        # ==================================================
         # BUTTONS
-        # =========================================
-        #
-        # Các nút chuyển đổi biểu đồ
-        #
-        # =========================================
+        # ==================================================
 
         button_layout = QHBoxLayout()
 
-        self.btn_metrics = QPushButton(
-            "Classification Metrics"
-        )
+        self.btn_run = QPushButton("Run Evaluation")
 
         self.btn_confusion = QPushButton(
             "Confusion Matrix"
         )
 
-        button_layout.addWidget(self.btn_metrics)
+        self.btn_metrics = QPushButton(
+            "Metrics Chart"
+        )
+
+        self.btn_fps = QPushButton(
+            "FPS Chart"
+        )
+
+        button_layout.addWidget(self.btn_run)
         button_layout.addWidget(self.btn_confusion)
+        button_layout.addWidget(self.btn_metrics)
+        button_layout.addWidget(self.btn_fps)
 
-        # =========================================
+        # ==================================================
         # CHART AREA
-        # =========================================
-        #
-        # Khu vực hiển thị biểu đồ đánh giá
-        #
-        # =========================================
+        # ==================================================
 
-        chart_group = QGroupBox("Performance Chart")
+        chart_group = QGroupBox("Performance Charts")
 
         chart_layout = QVBoxLayout()
 
@@ -169,15 +174,15 @@ class PerformanceWindow(QWidget):
 
         chart_group.setLayout(chart_layout)
 
-        # =========================================
+        # ==================================================
         # ADD TO MAIN LAYOUT
-        # =========================================
+        # ==================================================
 
         main_layout.addWidget(title)
 
         main_layout.addLayout(metrics_layout)
 
-        main_layout.addLayout(confusion_layout)
+        main_layout.addWidget(self.table)
 
         main_layout.addLayout(button_layout)
 
@@ -185,25 +190,29 @@ class PerformanceWindow(QWidget):
 
         self.setLayout(main_layout)
 
-        # =========================================
-        # BUTTON EVENTS
-        # =========================================
+        # ==================================================
+        # EVENTS
+        # ==================================================
+
+        self.btn_run.clicked.connect(
+            self.run_evaluation
+        )
+
+        self.btn_confusion.clicked.connect(
+            self.draw_confusion_matrix
+        )
 
         self.btn_metrics.clicked.connect(
             self.draw_metrics_chart
         )
 
-        self.btn_confusion.clicked.connect(
-            self.draw_confusion_chart
+        self.btn_fps.clicked.connect(
+            self.draw_fps_chart
         )
 
-    # =============================================
+    # ==================================================
     # CREATE CARD
-    # =============================================
-    #
-    # Tạo card hiển thị metric
-    #
-    # =============================================
+    # ==================================================
 
     def create_card(self, title, value):
 
@@ -221,10 +230,6 @@ class PerformanceWindow(QWidget):
 
         layout = QVBoxLayout()
 
-        # =========================
-        # TITLE
-        # =========================
-
         lbl_title = QLabel(title)
 
         lbl_title.setAlignment(Qt.AlignCenter)
@@ -233,10 +238,6 @@ class PerformanceWindow(QWidget):
             font-size: 14px;
             color: #bbbbbb;
         """)
-
-        # =========================
-        # VALUE
-        # =========================
 
         lbl_value = QLabel(value)
 
@@ -248,7 +249,6 @@ class PerformanceWindow(QWidget):
             color: white;
         """)
 
-        # lưu label value
         frame.value_label = lbl_value
 
         layout.addWidget(lbl_title)
@@ -259,180 +259,270 @@ class PerformanceWindow(QWidget):
 
         return frame
 
-    # =============================================
-    # LOAD DATA
-    # =============================================
-    #
-    # Giả lập dữ liệu đánh giá classification
-    #
-    # =============================================
+    # ==================================================
+    # RUN EVALUATION
+    # ==================================================
 
-    def load_data(self):
+    def run_evaluation(self):
 
-        # =========================================
-        # CONFUSION MATRIX VALUES
-        # =========================================
-        #
-        # TP:
-        #   detect đúng buồn ngủ
-        #
-        # FP:
-        #   báo động giả
-        #
-        # FN:
-        #   bỏ sót buồn ngủ
-        #
-        # TN:
-        #   detect đúng bình thường
-        #
-        # =========================================
+        evaluator = PerformanceEvaluator()
 
-        TP = 94
-        FP = 7
-        FN = 5
-        TN = 88
+        results = evaluator.evaluate_dataset("Test")
 
-        # =========================================
-        # CLASSIFICATION METRICS
-        # =========================================
-
-        accuracy = (
-            (TP + TN) /
-            (TP + TN + FP + FN)
-        ) * 100
-
-        precision = (
-            TP /
-            (TP + FP)
-        ) * 100
-
-        recall = (
-            TP /
-            (TP + FN)
-        ) * 100
-
-        f1_score = (
-            2 * precision * recall
-        ) / (
-            precision + recall
+        calculator = MetricsCalculator(
+            self.labels
         )
 
-        # =========================================
-        # UPDATE UI
-        # =========================================
+        self.metrics_data = calculator.calculate(results)
+
+        report = self.metrics_data[
+            "classification_report"
+        ]
+
+        # ==================================================
+        # UPDATE OVERALL METRICS
+        # ==================================================
 
         self.card_accuracy.value_label.setText(
-            f"{accuracy:.2f}%"
+            f"{self.metrics_data['accuracy'] * 100:.2f}%"
         )
 
         self.card_precision.value_label.setText(
-            f"{precision:.2f}%"
+            f"{self.metrics_data['precision'] * 100:.2f}%"
         )
 
         self.card_recall.value_label.setText(
-            f"{recall:.2f}%"
+            f"{self.metrics_data['recall'] * 100:.2f}%"
         )
 
         self.card_f1.value_label.setText(
-            f"{f1_score:.2f}%"
+            f"{self.metrics_data['f1'] * 100:.2f}%"
         )
 
-        self.card_tp.value_label.setText(str(TP))
+        avg_fps = np.mean([
+            r["avg_fps"]
+            for r in results
+        ])
 
-        self.card_fp.value_label.setText(str(FP))
+        avg_latency = np.mean([
+            r["avg_process_time"]
+            for r in results
+        ])
 
-        self.card_fn.value_label.setText(str(FN))
+        self.card_fps.value_label.setText(
+            f"{avg_fps:.2f}"
+        )
 
-        self.card_tn.value_label.setText(str(TN))
+        self.card_latency.value_label.setText(
+            f"{avg_latency:.2f} ms"
+        )
 
-        # =========================================
-        # DEFAULT CHART
-        # =========================================
+        # ==================================================
+        # UPDATE TABLE
+        # ==================================================
 
-        self.draw_metrics_chart()
+        self.table.setRowCount(
+            len(self.labels)
+        )
 
-    # =============================================
-    # DRAW METRICS LINE CHART
-    # =============================================
-    #
-    # Biểu đồ đường đánh giá:
-    #
-    # - Accuracy
-    # - Precision
-    # - Recall
-    # - F1-score
-    #
-    # Đây là các metric quan trọng
-    # trong bài toán classification
-    #
-    # =============================================
+        for row, label in enumerate(self.labels):
 
-    def draw_metrics_chart(self):
+            data = report[label]
+
+            self.table.setItem(
+                row,
+                0,
+                QTableWidgetItem(label)
+            )
+
+            self.table.setItem(
+                row,
+                1,
+                QTableWidgetItem(
+                    f"{data['precision'] * 100:.2f}%"
+                )
+            )
+
+            self.table.setItem(
+                row,
+                2,
+                QTableWidgetItem(
+                    f"{data['recall'] * 100:.2f}%"
+                )
+            )
+
+            self.table.setItem(
+                row,
+                3,
+                QTableWidgetItem(
+                    f"{data['f1-score'] * 100:.2f}%"
+                )
+            )
+
+            self.table.setItem(
+                row,
+                4,
+                QTableWidgetItem(
+                    str(data['support'])
+                )
+            )
+
+        self.results = results
+
+        self.draw_confusion_matrix()
+
+    # ==================================================
+    # DRAW CONFUSION MATRIX
+    # ==================================================
+
+    def draw_confusion_matrix(self):
+
+        if self.metrics_data is None:
+            return
 
         self.figure.clear()
 
         ax = self.figure.add_subplot(111)
 
-        metrics = [
-            "Accuracy",
-            "Precision",
-            "Recall",
-            "F1-score"
+        cm = self.metrics_data[
+            "confusion_matrix"
         ]
 
-        values = [
-            float(
-                self.card_accuracy.value_label.text().replace("%", "")
-            ),
-            float(
-                self.card_precision.value_label.text().replace("%", "")
-            ),
-            float(
-                self.card_recall.value_label.text().replace("%", "")
-            ),
-            float(
-                self.card_f1.value_label.text().replace("%", "")
+        im = ax.imshow(cm)
+
+        ax.set_xticks(
+            range(len(self.labels))
+        )
+
+        ax.set_yticks(
+            range(len(self.labels))
+        )
+
+        ax.set_xticklabels(
+            self.labels,
+            rotation=15
+        )
+
+        ax.set_yticklabels(
+            self.labels
+        )
+
+        for i in range(len(self.labels)):
+            for j in range(len(self.labels)):
+
+                ax.text(
+                    j,
+                    i,
+                    str(cm[i, j]),
+                    ha="center",
+                    va="center",
+                    color="white"
+                )
+
+        ax.set_title(
+            "Confusion Matrix",
+            color="white"
+        )
+
+        ax.set_facecolor("#1c2541")
+
+        self.figure.patch.set_facecolor(
+            "#1c2541"
+        )
+
+        ax.tick_params(colors='white')
+
+        self.figure.tight_layout()
+
+        self.canvas.draw()
+
+    # ==================================================
+    # DRAW METRICS CHART
+    # ==================================================
+
+    def draw_metrics_chart(self):
+
+        if self.metrics_data is None:
+            return
+
+        self.figure.clear()
+
+        ax = self.figure.add_subplot(111)
+
+        report = self.metrics_data[
+            "classification_report"
+        ]
+
+        precision = []
+        recall = []
+        f1 = []
+
+        for label in self.labels:
+
+            precision.append(
+                report[label]['precision'] * 100
             )
-        ]
 
-        # =========================================
-        # LINE CHART
-        # =========================================
+            recall.append(
+                report[label]['recall'] * 100
+            )
+
+            f1.append(
+                report[label]['f1-score'] * 100
+            )
+
+        x = np.arange(len(self.labels))
 
         ax.plot(
-            metrics,
-            values,
+            x,
+            precision,
             marker='o',
             linewidth=3
         )
 
-        # =========================================
-        # TITLE
-        # =========================================
-
-        ax.set_title(
-            "Classification Performance Metrics",
-            color="white",
-            fontsize=15,
-            fontweight='bold'
+        ax.plot(
+            x,
+            recall,
+            marker='o',
+            linewidth=3
         )
+
+        ax.plot(
+            x,
+            f1,
+            marker='o',
+            linewidth=3
+        )
+
+        ax.set_xticks(x)
+
+        ax.set_xticklabels(
+            self.labels
+        )
+
+        ax.legend([
+            "Precision",
+            "Recall",
+            "F1-score"
+        ])
 
         ax.set_ylabel(
             "Score (%)",
             color="white"
         )
 
-        # =========================================
-        # DARK THEME
-        # =========================================
+        ax.set_title(
+            "Per-Class Performance",
+            color="white"
+        )
 
         ax.set_facecolor("#1c2541")
 
-        self.figure.patch.set_facecolor("#1c2541")
+        self.figure.patch.set_facecolor(
+            "#1c2541"
+        )
 
-        ax.tick_params(axis='x', colors='white')
-
-        ax.tick_params(axis='y', colors='white')
+        ax.tick_params(colors='white')
 
         for spine in ax.spines.values():
             spine.set_color("white")
@@ -442,103 +532,63 @@ class PerformanceWindow(QWidget):
             linestyle='--',
             alpha=0.3
         )
-
-        # =========================================
-        # SHOW VALUE
-        # =========================================
-
-        for i, v in enumerate(values):
-
-            ax.text(
-                i,
-                v + 0.5,
-                f"{v:.1f}",
-                color='white',
-                ha='center'
-            )
 
         self.figure.tight_layout()
 
         self.canvas.draw()
 
-    # =============================================
-    # DRAW CONFUSION MATRIX CHART
-    # =============================================
-    #
-    # Biểu đồ đường confusion matrix
-    #
-    # TP:
-    #   detect đúng buồn ngủ
-    #
-    # FP:
-    #   báo động giả
-    #
-    # FN:
-    #   bỏ sót buồn ngủ
-    #
-    # TN:
-    #   detect đúng bình thường
-    #
-    # =============================================
+    # ==================================================
+    # DRAW FPS CHART
+    # ==================================================
 
-    def draw_confusion_chart(self):
+    def draw_fps_chart(self):
+
+        if not hasattr(self, "results"):
+            return
 
         self.figure.clear()
 
         ax = self.figure.add_subplot(111)
 
-        labels = [
-            "TP",
-            "FP",
-            "FN",
-            "TN"
+        videos = [
+            r["video"]
+            for r in self.results
         ]
 
-        values = [
-            int(self.card_tp.value_label.text()),
-            int(self.card_fp.value_label.text()),
-            int(self.card_fn.value_label.text()),
-            int(self.card_tn.value_label.text())
+        fps_values = [
+            r["avg_fps"]
+            for r in self.results
         ]
-
-        # =========================================
-        # LINE CHART
-        # =========================================
 
         ax.plot(
-            labels,
-            values,
+            range(len(videos)),
+            fps_values,
             marker='o',
             linewidth=3
         )
 
-        # =========================================
-        # TITLE
-        # =========================================
-
         ax.set_title(
-            "Confusion Matrix Statistics",
-            color='white',
-            fontsize=15,
-            fontweight='bold'
+            "FPS Performance",
+            color="white"
         )
 
         ax.set_ylabel(
-            "Count",
-            color='white'
+            "FPS",
+            color="white"
         )
 
-        # =========================================
-        # DARK THEME
-        # =========================================
+        ax.set_xlabel(
+            "Videos",
+            color="white"
+        )
 
         ax.set_facecolor("#1c2541")
 
-        self.figure.patch.set_facecolor("#1c2541")
+        self.figure.patch.set_facecolor(
+            "#1c2541"
+        )
 
-        ax.tick_params(axis='x', colors='white')
-
-        ax.tick_params(axis='y', colors='white')
+        ax.tick_params(colors='white')
 
         for spine in ax.spines.values():
             spine.set_color("white")
@@ -548,20 +598,6 @@ class PerformanceWindow(QWidget):
             linestyle='--',
             alpha=0.3
         )
-
-        # =========================================
-        # SHOW VALUE
-        # =========================================
-
-        for i, v in enumerate(values):
-
-            ax.text(
-                i,
-                v + 1,
-                str(v),
-                color='white',
-                ha='center'
-            )
 
         self.figure.tight_layout()
 

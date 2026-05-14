@@ -1,4 +1,5 @@
 import cv2
+import time
 import numpy as np
 from config.config import *
 from PyQt5.QtCore import *
@@ -11,7 +12,6 @@ from detection.mouth import process_mouth_state
 from config.config import *
 
 mp_face_mesh = mp.solutions.face_mesh
-
 
 class VideoThread(QThread):
     change_pixmap_signal = pyqtSignal(np.ndarray)
@@ -46,11 +46,10 @@ class VideoThread(QThread):
 
     def run(self):
         fps = self.cap.get(cv2.CAP_PROP_FPS)
-        if fps == 0:
+        if fps <= 0:
             fps = 25
 
-        frame_time = 1 / fps
-        delay = int(frame_time * 1000)
+        frame_time = 1.0 / fps  # giây mỗi frame
 
         eye_closed_time = 0
         mouth_open_time = 0
@@ -65,6 +64,8 @@ class VideoThread(QThread):
                 if self._pause:
                     QThread.msleep(50)
                     continue
+
+                start_time = time.time()  # Bắt đầu đo thời gian xử lý
 
                 ret, frame = self.cap.read()
                 if not ret:
@@ -82,6 +83,7 @@ class VideoThread(QThread):
                 head_alert = ""
                 x = y = z = 0
                 head_time = 0
+                distract_time = 0
 
                 if results.multi_face_landmarks:
                     for face_landmarks in results.multi_face_landmarks:
@@ -141,4 +143,11 @@ class VideoThread(QThread):
                 })
 
                 self.change_pixmap_signal.emit(frame)
-                QThread.msleep(delay)
+
+                # Tính thời gian còn lại cần sleep để đúng FPS
+                elapsed = time.time() - start_time
+                remaining = frame_time - elapsed
+
+                if remaining > 0:
+                    QThread.msleep(int(remaining * 1000))
+                # Nếu remaining <= 0: xử lý quá lâu, đọc frame tiếp luôn
