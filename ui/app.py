@@ -12,7 +12,6 @@ from .layout import build_right_panel, build_buttons, build_left_stack
 from .handlers import update_image, update_info
 
 from .history.history_window import HistoryWindow
-from .performance.performance_window import PerformanceWindow
 
 
 class App(QWidget):
@@ -41,21 +40,18 @@ class App(QWidget):
 
         right_panel = build_right_panel(self)
         settings_layout, control_layout = build_buttons(self)
-
         camera_widget = build_left_stack(self)
 
         # =========================
-        # STACK FIX (QUAN TRỌNG)
+        # STACK (ONLY 2 VIEW)
         # =========================
         self.stack = QStackedWidget()
 
         self.camera_view = camera_widget
         self.history_view = HistoryWindow()
-        self.performance_view = PerformanceWindow()
 
-        self.stack.addWidget(self.camera_view)        # index 0
-        self.stack.addWidget(self.history_view)       # index 1
-        self.stack.addWidget(self.performance_view)   # index 2
+        self.stack.addWidget(self.camera_view)   # index 0
+        self.stack.addWidget(self.history_view)  # index 1
 
         self.stack.setCurrentIndex(0)
 
@@ -86,7 +82,6 @@ class App(QWidget):
         self.btn_stop.clicked.connect(self.toggle_pause)
 
         self.btn_history.clicked.connect(self.toggle_history)
-        self.btn_performance.clicked.connect(self.toggle_performance)
 
         self.voice = Voice()
 
@@ -105,6 +100,9 @@ class App(QWidget):
         self.thread.stop()
         self.thread.start_camera()
 
+    # =========================
+    # OPEN VIDEO
+    # =========================
     def open_file(self):
         file_path, _ = QFileDialog.getOpenFileName(self, "Chọn video")
         if file_path:
@@ -131,7 +129,7 @@ class App(QWidget):
             self.is_paused = False
 
     # =========================
-    # HISTORY (FIX INDEX)
+    # HISTORY ONLY
     # =========================
     def toggle_history(self):
 
@@ -144,25 +142,12 @@ class App(QWidget):
             self.btn_history.setText("📊 Alert History")
 
     # =========================
-    # PERFORMANCE (FIX CRASH + INDEX)
-    # =========================
-    def toggle_performance(self):
-
-        if self.stack.currentIndex() != 2:
-
-            self.performance_view.load_data()
-            self.stack.setCurrentIndex(2)
-
-            self.btn_performance.setText("⬅ Back")
-            self.btn_history.setText("📊 Alert History")
-
-        else:
-            self.stack.setCurrentIndex(0)
-            self.btn_performance.setText("📈 Performance")
-
-    # =========================
     # CLOSE
     # =========================
     def closeEvent(self, event):
         self.thread.stop()
-        event.accept()
+        event.accept() 
+
+
+
+

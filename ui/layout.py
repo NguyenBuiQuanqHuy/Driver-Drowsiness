@@ -1,7 +1,6 @@
-# layout.py
 from PyQt5.QtWidgets import *
 from .history.history_window import HistoryWindow
-from .performance.performance_window import PerformanceWindow
+
 
 def build_right_panel(app):
     """
@@ -21,12 +20,10 @@ def build_right_panel(app):
 
     return panel
 
+
 def build_left_stack(app):
     """
-    Tạo vùng bên trái gồm:
-    - Camera view
-    - History view
-    (dùng QStackedLayout để chuyển qua lại)
+    Camera + History only (NO PERFORMANCE)
     """
 
     app.stack = QStackedLayout()
@@ -38,34 +35,29 @@ def build_left_stack(app):
     camera_widget.setLayout(cam_layout)
 
     # ===== HISTORY VIEW =====
-
     app.history_view = HistoryWindow()
-    app.performance_view = PerformanceWindow()
 
-    # add vào stack
-    app.stack.addWidget(camera_widget)        # 0
-    app.stack.addWidget(app.history_view)     # 1
-    app.stack.addWidget(app.performance_view) # 2
+    # add stack
+    app.stack.addWidget(camera_widget)       # 0
+    app.stack.addWidget(app.history_view)    # 1
 
-    # wrap lại
     container = QWidget()
     container.setLayout(app.stack)
 
-    return container    
+    return container
 
 
 def build_buttons(app):
     """
-    Tạo các button control
+    Buttons (NO PERFORMANCE BUTTON)
     """
+
     app.btn_settings = QPushButton("⚙ Settings")
     app.btn_history = QPushButton("📊 Alert History")
-    app.btn_performance = QPushButton("📈 Performance")
 
     settings_layout = QHBoxLayout()
     settings_layout.addWidget(app.btn_settings)
     settings_layout.addWidget(app.btn_history)
-    settings_layout.addWidget(app.btn_performance)
 
     app.btn_camera = QPushButton("🎥 Camera")
     app.btn_video = QPushButton("📁 Video")
