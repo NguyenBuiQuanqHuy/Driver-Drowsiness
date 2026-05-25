@@ -1,29 +1,11 @@
-# ===== COLOR =====
-COLOR_FACE = (0, 255, 0)     # xanh lá
-COLOR_EYE  = (255, 0, 0)     # xanh dương
-COLOR_MOUTH = (0, 0, 255)    # đỏ
+import json
 
-# ===== EYE =====
-EYE_CLOSED_THRESHOLD = 0.2
-DROWSY_EYE_TIME = 1
+CONFIG_PATH = "config/config.json"
 
-# ===== MOUTH =====
-MAR_THRESHOLD = 0.45
-YAWN_TIME = 1
+def load_config():
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-
-HEAD_DOWN_THRESHOLD = -8.0     # cúi đầu (x > 15)
-HEAD_UP_THRESHOLD = 10       # ngửa đầu
-HEAD_LEFT_THRESHOLD = -10    # quay trái (y < -20)
-HEAD_RIGHT_THRESHOLD = 10    # quay phải (y > 15)
-
-
-# ==============================
-# NGƯỠNG THỜI GIAN (GIÂY)
-# ==============================
-
-# WARNING_TIME = 1.0       # cảnh báo nhẹ
-# DROWSY_TIME = 2.0        # buồn ngủ
-MICROSLEEP_TIME = 2.0    # microsleep
-DISTRACTED_TIME = 2.0
-
+def save_config(data):
+    with open(CONFIG_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)

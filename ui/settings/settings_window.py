@@ -1,9 +1,13 @@
 from PyQt5.QtWidgets import *
 
-from .settings_manager import (
+from .settings_dialog import (
     load_settings,
     save_settings
 )
+
+from config.config import load_config
+
+from PyQt5.QtCore import Qt
 
 
 class SettingsWindow(QDialog):
@@ -14,9 +18,11 @@ class SettingsWindow(QDialog):
 
         self.setWindowTitle("Settings")
 
-        self.resize(300, 200)
+        self.setMinimumSize(400, 500)
 
         settings = load_settings()
+
+        config = load_config()
 
         layout = QVBoxLayout()
 
@@ -55,6 +61,66 @@ class SettingsWindow(QDialog):
         )
 
         layout.addWidget(self.voice_combo)
+        # =================================
+        # THRESHOLD INFO
+        # =================================
+        info_title = QLabel(
+            "Current Thresholds"
+        )
+
+        info_title.setStyleSheet(
+            "font-weight: bold; font-size: 14px;"
+        )
+
+        layout.addWidget(info_title)
+
+        info_text = (
+            f"===== EYE =====\n"
+            f"Closed Threshold: {config['eye']['closed_threshold']}\n"
+            f"Drowsy Time: {config['eye']['drowsy_time']}s\n\n"
+
+            f"===== MOUTH =====\n"
+            f"MAR Threshold: {config['mouth']['mar_threshold']}\n"
+            f"Yawn Time: {config['mouth']['yawn_time']}s\n\n"
+
+            f"===== HEAD =====\n"
+            f"Down: {config['head']['down_threshold']}\n"
+            f"Up: {config['head']['up_threshold']}\n"
+            f"Left: {config['head']['left_threshold']}\n"
+            f"Right: {config['head']['right_threshold']}"
+            f"Microsleep Time  : {config['time']['microsleep_time']}s\n"
+            f"Distracted Time  : {config['time']['distracted_time']}s"
+        )
+
+        self.info_label = QLabel(info_text)
+
+        self.info_label.setStyleSheet("""
+            background-color: #1e1e1e;
+            color: #00ff99;
+            padding: 10px;
+            border-radius: 8px;
+        """)
+
+        layout.addWidget(self.info_label)
+        # =================================
+        # VOLUME
+        # =================================
+        layout.addWidget(QLabel("Volume"))
+
+        self.volume_slider = QSlider(
+            Qt.Horizontal
+        )
+
+        self.volume_slider.setMinimum(0)
+        self.volume_slider.setMaximum(100)
+
+        self.volume_slider.setValue(
+            settings.get("volume", 100)
+        )
+
+        layout.addWidget(
+            self.volume_slider
+        )
 
         # =================================
         # SAVE
@@ -80,7 +146,9 @@ class SettingsWindow(QDialog):
 
             "theme": self.theme_combo.currentText(),
 
-            "voice_language": self.voice_combo.currentText()
+            "voice_language": self.voice_combo.currentText(),
+
+            "volume": self.volume_slider.value()
         }
 
         save_settings(data)

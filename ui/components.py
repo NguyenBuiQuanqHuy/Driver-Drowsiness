@@ -1,6 +1,7 @@
 # components.py
 from PyQt5.QtWidgets import QFrame, QLabel, QGridLayout
 from .styles import BOX_STYLE
+from PyQt5.QtWidgets import QFrame, QLabel, QGridLayout
 
 
 def create_box(title, has_time=False):
@@ -9,7 +10,7 @@ def create_box(title, has_time=False):
     Nếu has_time=True thì có thêm cột TIME
     """
     box = QFrame()
-    box.setStyleSheet(BOX_STYLE)
+#    box.setStyleSheet(BOX_STYLE)
 
     layout = QGridLayout()
 
@@ -17,14 +18,14 @@ def create_box(title, has_time=False):
     lbl_title.setStyleSheet("color: #5bc0be; font-weight: bold;")
 
     lbl_value = QLabel("---")
-    lbl_value.setStyleSheet("font-size: 18px; font-weight: bold;")
+    lbl_value.setObjectName("value")    
 
     if has_time:
         lbl_time_title = QLabel("TIME")
         lbl_time_title.setStyleSheet("color: #5bc0be; font-weight: bold;")
 
         lbl_time_value = QLabel("---")
-        lbl_time_value.setStyleSheet("font-size: 18px; font-weight: bold;")
+        lbl_time_value.setObjectName("timeValue")
 
         layout.addWidget(lbl_title, 0, 0)
         layout.addWidget(lbl_time_title, 0, 1)

@@ -1,5 +1,4 @@
 import cv2
-from config.config import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
@@ -12,6 +11,8 @@ from .layout import build_right_panel, build_buttons, build_left_stack
 from .handlers import update_image, update_info
 
 from .history.history_window import HistoryWindow
+from .settings.themes import DARK_THEME, LIGHT_THEME
+from .settings.settings_dialog import SettingsDialog
 
 
 class App(QWidget):
@@ -20,7 +21,7 @@ class App(QWidget):
 
         self.setWindowTitle("Driver Drowsiness Detection")
         self.setGeometry(100, 100, 1200, 700)
-        self.setStyleSheet(MAIN_STYLE)
+#        self.setStyleSheet(MAIN_STYLE)
 
         self.blink = False
         self.last_speak_time = 0
@@ -41,6 +42,10 @@ class App(QWidget):
         right_panel = build_right_panel(self)
         settings_layout, control_layout = build_buttons(self)
         camera_widget = build_left_stack(self)
+
+        self.current_theme = "dark"
+        self.setStyleSheet(DARK_THEME)  
+        self.btn_settings.clicked.connect(self.open_settings)
 
         # =========================
         # STACK (ONLY 2 VIEW)
@@ -140,6 +145,23 @@ class App(QWidget):
         else:
             self.stack.setCurrentIndex(0)
             self.btn_history.setText("📊 Alert History")
+
+    def open_settings(self):
+
+        dialog = SettingsDialog(self)
+        dialog.exec_()
+
+    def change_theme(self, theme):
+
+        self.current_theme = theme
+
+        if theme == "dark":
+            self.setStyleSheet(DARK_THEME)
+            self.history_view.setStyleSheet(DARK_THEME)
+
+        else:
+            self.setStyleSheet(LIGHT_THEME)
+            self.history_view.setStyleSheet(LIGHT_THEME)
 
     # =========================
     # CLOSE

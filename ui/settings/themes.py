@@ -1,28 +1,103 @@
-WHITE_THEME = """
-QWidget{
+# themes.py
+
+DARK_THEME = """
+QWidget {
+    background-color: #0b132b;
+    color: white;
+}
+
+QPushButton {
+    background-color: #1c2541;
+    border: 2px solid #5bc0be;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: #5bc0be;
+    color: black;
+}
+
+QLabel {
+    color: white;
+    font-weight: bold;
+}
+
+QFrame QLabel#value[alert="true"],
+QFrame QLabel#timeValue[alert="true"],
+QLabel[alert="true"] {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+QFrame {
+    background-color: #1c2541;
+    border: 2px solid #5bc0be;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+QComboBox {
+    background-color: #1c2541;
+    color: white;
+    border: 2px solid #5bc0be;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLabel[alert="true"] {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+"""
+
+LIGHT_THEME = """
+QWidget {
     background-color: white;
     color: black;
-    font-size: 14px;
 }
 
-QPushButton{
+QPushButton {
     background-color: #e0e0e0;
-    border: 1px solid #bdbdbd;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-QPushButton:hover{
-    background-color: #d6d6d6;
-}
-
-QLabel{
+    border: 2px solid #999;
+    padding: 10px;
+    border-radius: 10px;
     color: black;
 }
 
-QFrame{
-    background-color: #f5f5f5;
+QPushButton:hover {
+    background-color: #cfcfcf;
+}
+
+QLabel {
+    color: black;
+    font-weight: bold;
+}
+
+QFrame QLabel#value[alert="true"],
+QFrame QLabel#timeValue[alert="true"],
+QLabel[alert="true"] {
+    color: red;
+    font-weight: bold;
+}
+
+QFrame {
+    background-color: #f0f0f0;
+    border: 2px solid #999;
     border-radius: 10px;
-    border: 1px solid #d0d0d0;
+    padding: 10px;
+}
+
+QComboBox {
+    background-color: #f0f0f0;
+    color: black;
+    border: 2px solid #999;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLabel[alert="true"] {
+    color: red;
+    font-weight: bold;
 }
 """

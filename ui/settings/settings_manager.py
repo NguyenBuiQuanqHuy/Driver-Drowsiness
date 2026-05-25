@@ -1,50 +1,29 @@
 import json
 import os
 
-
-SETTINGS_FILE = "settings.json"
-
-
-DEFAULT_SETTINGS = {
-
-    "theme": "Dark",
-
-    "voice_language": "English"
-}
+FILE_PATH = "settings.json"
 
 
-# =========================================
-# LOAD SETTINGS
-# =========================================
 def load_settings():
 
-    if not os.path.exists(SETTINGS_FILE):
+    default = {
+        "theme": "Dark",
+        "voice_language": "English",
+        "volume": 100
+    }
 
-        save_settings(DEFAULT_SETTINGS)
+    if not os.path.exists(FILE_PATH):
+        return default
 
-    with open(
-        SETTINGS_FILE,
-        "r",
-        encoding="utf-8"
-    ) as f:
+    try:
+        with open(FILE_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-        return json.load(f)
+    except:
+        return default
 
 
-# =========================================
-# SAVE SETTINGS
-# =========================================
 def save_settings(data):
 
-    with open(
-        SETTINGS_FILE,
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            data,
-            f,
-            indent=4,
-            ensure_ascii=False
-        )
+    with open(FILE_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)

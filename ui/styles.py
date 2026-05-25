@@ -4,7 +4,6 @@
 MAIN_STYLE = """
 QWidget {
     background-color: #0b132b;
-    color: white;
 }
 QPushButton {
     background-color: #1c2541;
@@ -28,7 +27,7 @@ padding: 10px;
 
 # ===== STATUS DEFAULT =====
 STATUS_DEFAULT = """
-background-color: #222;
+background-color: #00c853;;
 border: 2px solid gray;
 color: white;
 padding: 15px;

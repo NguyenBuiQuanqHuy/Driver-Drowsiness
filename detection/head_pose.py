@@ -1,9 +1,16 @@
 import cv2
 import mediapipe as mp
 import numpy as np
-from config.config import *
+from config.config import load_config
+config = load_config()
 import time
 
+HEAD_DOWN_THRESHOLD = config["head"]["down_threshold"]
+HEAD_UP_THRESHOLD = config["head"]["up_threshold"]
+HEAD_LEFT_THRESHOLD = config["head"]["left_threshold"]
+HEAD_RIGHT_THRESHOLD = config["head"]["right_threshold"]
+MICROSLEEP_TIME = config["time"]["microsleep_time"]
+DISTRACTED_TIME = config["time"]["distracted_time"]
 # Thời gian frame trước đó (dùng để tính thời gian realtime)
 prev_time = time.time()
 
@@ -75,8 +82,8 @@ def projectCameraAngle_fp(face_2d, face_3d, img_h, img_w):
     # Ma trận camera (giả lập)
     focal_length = 1 * img_w
     cam_matrix = np.array([
-        [focal_length, 0, img_h / 2],
-        [0, focal_length, img_w / 2],
+        [focal_length, 0, img_w / 2],
+        [0, focal_length, img_h / 2],
         [0, 0, 1]
     ])
 
@@ -204,7 +211,7 @@ def pipelineHeadTiltPose(image, face_landmarks):
     # PHÂN MỨC CẢNH BÁO
     # ==============================
     if down_time > MICROSLEEP_TIME:
-        alert = "MICROSLEEP"
+        alert = "DROWSINESS"
     # elif down_time > DROWSY_TIME:
     #     alert = "DROWSY"
     elif distract_time > DISTRACTED_TIME:   # 3 giây không nhìn phía trước
