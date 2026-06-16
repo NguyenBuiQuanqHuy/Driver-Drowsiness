@@ -144,7 +144,7 @@ def update_info(app, data):
     # MICROSLEEP
     # =========================
     if level == 2:
-        if app.voice.speak_warning("Warning! Microsleep detected! Wake up immediately!"):
+        if app.voice.speak_warning("Warning! You are falling asleep. Wake up immediately!"):
             save_alert("DROWSINESS", data)
 
         app.blink = not app.blink

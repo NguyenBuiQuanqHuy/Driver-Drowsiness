@@ -3057,5 +3057,152 @@
         "ear": 0.44,
         "mar": 0.04,
         "head": "Down"
+    },
+    {
+        "time": "2026-06-16 22:10:55",
+        "type": "EYES CLOSED",
+        "ear": 0.22,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 22:11:03",
+        "type": "YAWN",
+        "ear": 0.32,
+        "mar": 0.57,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 22:11:08",
+        "type": "YAWN",
+        "ear": 0.26,
+        "mar": 0.62,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 22:11:15",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-06-16 22:11:24",
+        "type": "DISTRACTED",
+        "ear": 0.38,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-16 22:11:29",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.06,
+        "head": "Right"
+    },
+    {
+        "time": "2026-06-16 22:11:32",
+        "type": "DISTRACTED",
+        "ear": 0.35,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-16 22:13:25",
+        "type": "DROWSINESS",
+        "ear": 0.4,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-06-16 22:13:31",
+        "type": "DROWSINESS",
+        "ear": 0.41,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-06-16 22:13:37",
+        "type": "DISTRACTED",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-16 22:13:43",
+        "type": "DISTRACTED",
+        "ear": 0.38,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-06-16 22:13:49",
+        "type": "DISTRACTED",
+        "ear": 0.35,
+        "mar": 0.07,
+        "head": "Up"
+    },
+    {
+        "time": "2026-06-16 22:13:55",
+        "type": "YAWN",
+        "ear": 0.32,
+        "mar": 0.54,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 22:14:06",
+        "type": "DISTRACTED",
+        "ear": 0.36,
+        "mar": 0.17,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-16 22:14:22",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 22:14:29",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 23:58:57",
+        "type": "YAWN",
+        "ear": 0.38,
+        "mar": 0.59,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 23:59:01",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-06-16 23:59:08",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-16 23:59:12",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-06-16 23:59:15",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.0,
+        "head": "Down"
     }
 ]
