@@ -1,0 +1,24 @@
+@startuml
+:Thu nhận dữ liệu từ camera;
+
+:Phát hiện khuôn mặt và
+trích xuất landmark
+(MediaPipe Face Mesh);
+
+:Trích xuất đặc trưng;
+
+split
+    :Tính EAR;
+split again
+    :Tính MAR;
+split again
+    :Head Pose 
+    Estimation;
+end split
+
+:Đánh giá trạng thái
+người lái;
+
+:Nếu phát hiện mệt mỏi
+=> Kích hoạt cảnh báo;
+@enduml

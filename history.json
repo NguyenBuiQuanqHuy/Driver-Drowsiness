@@ -75,5 +75,2987 @@
         "ear": 0.38,
         "mar": 0.18,
         "head": "Down"
+    },
+    {
+        "time": "2026-05-25 22:15:50",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-25 22:16:03",
+        "type": "YAWN",
+        "ear": 0.33,
+        "mar": 0.71,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-25 22:16:24",
+        "type": "YAWN",
+        "ear": 0.36,
+        "mar": 0.64,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-25 22:16:35",
+        "type": "YAWN",
+        "ear": 0.37,
+        "mar": 0.57,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-25 22:16:40",
+        "type": "DROWSINESS",
+        "ear": 0.36,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-25 22:19:58",
+        "type": "YAWN",
+        "ear": 0.37,
+        "mar": 0.62,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-25 22:20:18",
+        "type": "YAWN",
+        "ear": 0.33,
+        "mar": 0.75,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-25 22:32:05",
+        "type": "DISTRACTED",
+        "ear": 0.18,
+        "mar": 0.33,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-25 22:32:28",
+        "type": "EYES CLOSED",
+        "ear": 0.19,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 08:16:30",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:17:02",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:17:43",
+        "type": "DROWSINESS",
+        "ear": 0.41,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:19:10",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:19:21",
+        "type": "DISTRACTED",
+        "ear": 0.39,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:19:27",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:19:33",
+        "type": "YAWN",
+        "ear": 0.38,
+        "mar": 0.57,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 08:19:42",
+        "type": "YAWN",
+        "ear": 0.4,
+        "mar": 0.57,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 08:19:49",
+        "type": "YAWN",
+        "ear": 0.39,
+        "mar": 0.51,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 08:19:56",
+        "type": "YAWN",
+        "ear": 0.41,
+        "mar": 0.51,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 08:20:17",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:20:31",
+        "type": "DISTRACTED",
+        "ear": 0.53,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:20:58",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:21:06",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:21:14",
+        "type": "DISTRACTED",
+        "ear": 0.39,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:21:57",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:23:34",
+        "type": "DISTRACTED",
+        "ear": 0.45,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:23:48",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:24:08",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.11,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:24:14",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.11,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:24:19",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.1,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:24:25",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:24:34",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.09,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:24:49",
+        "type": "DISTRACTED",
+        "ear": 0.63,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:25:04",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.08,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:25:17",
+        "type": "DISTRACTED",
+        "ear": 0.5,
+        "mar": 0.02,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:25:26",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:25:32",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:25:41",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.05,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:25:56",
+        "type": "DISTRACTED",
+        "ear": 0.56,
+        "mar": 0.26,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:26:07",
+        "type": "DROWSINESS",
+        "ear": 0.35,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:26:20",
+        "type": "DISTRACTED",
+        "ear": 0.54,
+        "mar": 0.13,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:27:05",
+        "type": "DISTRACTED",
+        "ear": 0.39,
+        "mar": 0.05,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-26 08:27:23",
+        "type": "DISTRACTED",
+        "ear": 0.8,
+        "mar": 0.07,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:27:37",
+        "type": "DISTRACTED",
+        "ear": 0.48,
+        "mar": 0.26,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:27:46",
+        "type": "DISTRACTED",
+        "ear": 0.46,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:27:58",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.07,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:28:11",
+        "type": "DISTRACTED",
+        "ear": 0.35,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:28:58",
+        "type": "DROWSINESS",
+        "ear": 0.44,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:29:44",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.09,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:29:56",
+        "type": "DISTRACTED",
+        "ear": 0.38,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:30:08",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:30:25",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:30:31",
+        "type": "DROWSINESS",
+        "ear": 0.34,
+        "mar": 0.13,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:30:37",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:30:45",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:30:50",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:30:56",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:31:37",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.09,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:31:43",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.09,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:32:30",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:32:42",
+        "type": "DROWSINESS",
+        "ear": 0.41,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:33:29",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:33:35",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:33:46",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:34:54",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.13,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:35:13",
+        "type": "DISTRACTED",
+        "ear": 0.54,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:35:19",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.45,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:35:24",
+        "type": "DISTRACTED",
+        "ear": 0.54,
+        "mar": 0.07,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:35:29",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.21,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:35:39",
+        "type": "DISTRACTED",
+        "ear": 0.29,
+        "mar": 0.14,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:35:47",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:35:54",
+        "type": "DISTRACTED",
+        "ear": 0.46,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:36:01",
+        "type": "DROWSINESS",
+        "ear": 0.34,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:36:10",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:36:47",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:36:53",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:36:59",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:37:05",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:37:10",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:37:29",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.05,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:39:26",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:39:46",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:39:55",
+        "type": "DROWSINESS",
+        "ear": 0.38,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:40:34",
+        "type": "DROWSINESS",
+        "ear": 0.4,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:41:08",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:41:32",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.25,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:43:02",
+        "type": "DROWSINESS",
+        "ear": 0.38,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:43:26",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.08,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:43:54",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:43:59",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.13,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:44:17",
+        "type": "DISTRACTED",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:44:22",
+        "type": "DROWSINESS",
+        "ear": 0.36,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:44:36",
+        "type": "DISTRACTED",
+        "ear": 0.38,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:46:08",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:46:17",
+        "type": "DISTRACTED",
+        "ear": 0.5,
+        "mar": 0.15,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:46:25",
+        "type": "DISTRACTED",
+        "ear": 0.35,
+        "mar": 0.04,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:46:34",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.06,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:47:30",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:47:43",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:48:25",
+        "type": "DISTRACTED",
+        "ear": 0.53,
+        "mar": 0.07,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:48:30",
+        "type": "DISTRACTED",
+        "ear": 0.45,
+        "mar": 0.32,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:48:35",
+        "type": "DISTRACTED",
+        "ear": 0.49,
+        "mar": 0.05,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:48:43",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:49:19",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.05,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:50:44",
+        "type": "DISTRACTED",
+        "ear": 0.55,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 08:51:35",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:51:40",
+        "type": "DISTRACTED",
+        "ear": 0.3,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:51:52",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 08:54:19",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:54:24",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:54:30",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:54:36",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:54:41",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:54:49",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:54:54",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:55:01",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:55:14",
+        "type": "EYES CLOSED",
+        "ear": 0.26,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:55:19",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:55:59",
+        "type": "DROWSINESS",
+        "ear": 0.35,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:05",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:11",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:21",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:27",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:33",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:38",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:44",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:50",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:56:56",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:02",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:12",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:24",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:30",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:36",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:42",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:48",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:53",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:57:59",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:58:05",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:58:11",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:58:17",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:58:22",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.11,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:58:28",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:59:13",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:59:19",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:59:25",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 08:59:30",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:00:29",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:00:40",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:00:46",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:00:52",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:00:59",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:05",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:10",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:16",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:28",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:34",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:39",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:45",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:52",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:01:58",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:02:04",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.0,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 09:02:12",
+        "type": "DISTRACTED",
+        "ear": 0.49,
+        "mar": 0.03,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-26 09:02:29",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:02:34",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:02:39",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:02:45",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:02:51",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:02:57",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:03",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:08",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:14",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:20",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:26",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:31",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:44",
+        "type": "EYES CLOSED",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:49",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:03:57",
+        "type": "EYES CLOSED",
+        "ear": 0.26,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:04:02",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:04:09",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:04:15",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:04:20",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:05:02",
+        "type": "DROWSINESS",
+        "ear": 0.36,
+        "mar": 0.12,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:05:13",
+        "type": "DROWSINESS",
+        "ear": 0.39,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:05:50",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:05:56",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:06:01",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:06:07",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:06:22",
+        "type": "DROWSINESS",
+        "ear": 0.41,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:06:42",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:06:50",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:06:56",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:07:16",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:07:41",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:07:48",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:07:56",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:08:02",
+        "type": "DROWSINESS",
+        "ear": 0.34,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:08:08",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:08:13",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:08:23",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:08:43",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:08:49",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:09:05",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:09:11",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:09:19",
+        "type": "DROWSINESS",
+        "ear": 0.39,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:09:45",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:09:51",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.1,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:09:56",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.1,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:02",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:08",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:14",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:20",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.09,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:25",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:31",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:37",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.09,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:43",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:48",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:10:54",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.11,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:00",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:06",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:11",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:17",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:23",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.11,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:29",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:34",
+        "type": "DROWSINESS",
+        "ear": 0.25,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:40",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:46",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:52",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:11:58",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.11,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:03",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:09",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.09,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:15",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:21",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.08,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:26",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.11,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:32",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:38",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.09,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:44",
+        "type": "DROWSINESS",
+        "ear": 0.24,
+        "mar": 0.1,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:12:59",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:14:10",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:15:01",
+        "type": "DROWSINESS",
+        "ear": 0.36,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:15:53",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:15:59",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:16:29",
+        "type": "DROWSINESS",
+        "ear": 0.45,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:17:00",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:17:06",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.07,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:17:11",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:17:56",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:02",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:08",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:13",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:19",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:25",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:31",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:36",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:18:48",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:00",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:24",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:30",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:36",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:41",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:47",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:53",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:19:59",
+        "type": "DROWSINESS",
+        "ear": 0.3,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:20:05",
+        "type": "DROWSINESS",
+        "ear": 0.34,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:20:10",
+        "type": "DROWSINESS",
+        "ear": 0.26,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:20:16",
+        "type": "DROWSINESS",
+        "ear": 0.29,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:20:22",
+        "type": "DROWSINESS",
+        "ear": 0.28,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:20:28",
+        "type": "DROWSINESS",
+        "ear": 0.27,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:21:46",
+        "type": "DISTRACTED",
+        "ear": 0.39,
+        "mar": 0.25,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:22:52",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.08,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:23:11",
+        "type": "DISTRACTED",
+        "ear": 0.49,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:23:18",
+        "type": "DISTRACTED",
+        "ear": 0.36,
+        "mar": 0.02,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 09:25:27",
+        "type": "DISTRACTED",
+        "ear": 0.34,
+        "mar": 0.02,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 09:26:43",
+        "type": "DISTRACTED",
+        "ear": 0.54,
+        "mar": 0.09,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:26:55",
+        "type": "DROWSINESS",
+        "ear": 0.34,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:27:06",
+        "type": "DROWSINESS",
+        "ear": 0.35,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:27:14",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.05,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-26 09:28:07",
+        "type": "DISTRACTED",
+        "ear": 0.49,
+        "mar": 0.28,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:28:27",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.04,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:28:44",
+        "type": "DROWSINESS",
+        "ear": 0.32,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:30:35",
+        "type": "DISTRACTED",
+        "ear": 0.33,
+        "mar": 0.05,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:30:49",
+        "type": "DISTRACTED",
+        "ear": 0.42,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:32:00",
+        "type": "DISTRACTED",
+        "ear": 0.6,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:32:06",
+        "type": "DISTRACTED",
+        "ear": 0.5,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:40:12",
+        "type": "DISTRACTED",
+        "ear": 0.53,
+        "mar": 0.21,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:40:23",
+        "type": "DISTRACTED",
+        "ear": 0.44,
+        "mar": 0.04,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:40:40",
+        "type": "DISTRACTED",
+        "ear": 0.48,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:41:20",
+        "type": "DISTRACTED",
+        "ear": 0.59,
+        "mar": 0.06,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:41:25",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.04,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:42:17",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:42:36",
+        "type": "DISTRACTED",
+        "ear": 0.38,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:42:41",
+        "type": "DISTRACTED",
+        "ear": 0.48,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:45:39",
+        "type": "DISTRACTED",
+        "ear": 0.68,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:45:44",
+        "type": "DISTRACTED",
+        "ear": 0.57,
+        "mar": 0.17,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:45:49",
+        "type": "DROWSINESS",
+        "ear": 0.37,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:46:19",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:47:11",
+        "type": "EYES CLOSED",
+        "ear": 0.22,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 09:48:00",
+        "type": "YAWN",
+        "ear": 0.41,
+        "mar": 0.58,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 09:48:05",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.1,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:49:34",
+        "type": "EYES CLOSED",
+        "ear": 0.22,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 09:50:05",
+        "type": "DISTRACTED",
+        "ear": 0.46,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:50:34",
+        "type": "DISTRACTED",
+        "ear": 0.33,
+        "mar": 0.04,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:51:36",
+        "type": "DISTRACTED",
+        "ear": 0.49,
+        "mar": 0.17,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:51:44",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.15,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:52:29",
+        "type": "DROWSINESS",
+        "ear": 0.44,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:52:37",
+        "type": "DROWSINESS",
+        "ear": 0.31,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 09:53:12",
+        "type": "DISTRACTED",
+        "ear": 0.46,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:53:17",
+        "type": "DISTRACTED",
+        "ear": 0.44,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:53:23",
+        "type": "DISTRACTED",
+        "ear": 0.45,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:53:52",
+        "type": "DISTRACTED",
+        "ear": 0.29,
+        "mar": 0.05,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 09:54:13",
+        "type": "DISTRACTED",
+        "ear": 0.5,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 09:56:39",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.05,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:57:05",
+        "type": "DISTRACTED",
+        "ear": 0.58,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:57:10",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.04,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:57:18",
+        "type": "DISTRACTED",
+        "ear": 0.46,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 09:57:28",
+        "type": "DISTRACTED",
+        "ear": 0.52,
+        "mar": 0.0,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-26 13:30:05",
+        "type": "DISTRACTED",
+        "ear": 0.33,
+        "mar": 0.02,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-26 15:47:32",
+        "type": "YAWN",
+        "ear": 0.4,
+        "mar": 0.62,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 15:47:47",
+        "type": "YAWN",
+        "ear": 0.39,
+        "mar": 0.61,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 15:49:26",
+        "type": "YAWN",
+        "ear": 0.42,
+        "mar": 0.58,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 15:49:36",
+        "type": "YAWN",
+        "ear": 0.4,
+        "mar": 0.59,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 15:49:43",
+        "type": "YAWN",
+        "ear": 0.41,
+        "mar": 0.58,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 15:51:27",
+        "type": "YAWN",
+        "ear": 0.43,
+        "mar": 0.61,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 15:51:37",
+        "type": "YAWN",
+        "ear": 0.4,
+        "mar": 0.61,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 20:54:11",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 20:55:41",
+        "type": "DROWSINESS",
+        "ear": 0.41,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-26 22:05:39",
+        "type": "DISTRACTED",
+        "ear": 0.39,
+        "mar": 0.06,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-26 22:05:48",
+        "type": "DISTRACTED",
+        "ear": 0.34,
+        "mar": 0.0,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-26 22:07:50",
+        "type": "EYES CLOSED",
+        "ear": 0.26,
+        "mar": 0.04,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-26 22:10:00",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:12:21",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:33:05",
+        "type": "DISTRACTED",
+        "ear": 0.59,
+        "mar": 0.0,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 08:34:04",
+        "type": "EYES CLOSED",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:34:17",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:34:22",
+        "type": "EYES CLOSED",
+        "ear": 0.2,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:35:08",
+        "type": "DISTRACTED",
+        "ear": 0.33,
+        "mar": 0.05,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 08:35:26",
+        "type": "YAWN",
+        "ear": 0.23,
+        "mar": 0.72,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:41:31",
+        "type": "EYES CLOSED",
+        "ear": 0.26,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:42:35",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:43:22",
+        "type": "DISTRACTED",
+        "ear": 0.72,
+        "mar": 0.05,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 08:43:38",
+        "type": "DISTRACTED",
+        "ear": 0.73,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 08:44:34",
+        "type": "DISTRACTED",
+        "ear": 0.44,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 08:44:55",
+        "type": "EYES CLOSED",
+        "ear": 0.19,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:45:00",
+        "type": "EYES CLOSED",
+        "ear": 0.19,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 08:47:55",
+        "type": "DISTRACTED",
+        "ear": 0.47,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 08:49:46",
+        "type": "DISTRACTED",
+        "ear": 0.68,
+        "mar": 0.02,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 08:49:51",
+        "type": "DISTRACTED",
+        "ear": 0.53,
+        "mar": 0.04,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 08:50:21",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.02,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 09:05:28",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-27 09:05:42",
+        "type": "DISTRACTED",
+        "ear": 0.67,
+        "mar": 0.0,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 09:10:33",
+        "type": "DISTRACTED",
+        "ear": 0.71,
+        "mar": 0.08,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 09:11:27",
+        "type": "DISTRACTED",
+        "ear": 0.68,
+        "mar": 0.02,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 09:26:02",
+        "type": "DISTRACTED",
+        "ear": 0.29,
+        "mar": 0.19,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-27 09:32:04",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 09:32:12",
+        "type": "EYES CLOSED",
+        "ear": 0.19,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 09:33:14",
+        "type": "EYES CLOSED",
+        "ear": 0.2,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:10:19",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:11:24",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:11:51",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.02,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:12:07",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:13:06",
+        "type": "DROWSINESS",
+        "ear": 0.44,
+        "mar": 0.04,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-27 14:13:12",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 14:13:25",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.03,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 14:13:32",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 14:13:40",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 14:13:45",
+        "type": "DISTRACTED",
+        "ear": 0.4,
+        "mar": 0.02,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 14:14:13",
+        "type": "YAWN",
+        "ear": 0.38,
+        "mar": 0.48,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:15:18",
+        "type": "DROWSINESS",
+        "ear": 0.36,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-27 14:15:44",
+        "type": "YAWN",
+        "ear": 0.36,
+        "mar": 0.56,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:17:09",
+        "type": "DISTRACTED",
+        "ear": 0.45,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 14:17:17",
+        "type": "DISTRACTED",
+        "ear": 0.48,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-27 14:20:35",
+        "type": "DISTRACTED",
+        "ear": 0.58,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-27 14:24:01",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:27:16",
+        "type": "EYES CLOSED",
+        "ear": 0.25,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 14:29:34",
+        "type": "DISTRACTED",
+        "ear": 0.31,
+        "mar": 0.0,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-27 16:06:03",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.0,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-27 16:06:49",
+        "type": "EYES CLOSED",
+        "ear": 0.18,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:07:31",
+        "type": "EYES CLOSED",
+        "ear": 0.2,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:07:42",
+        "type": "DISTRACTED",
+        "ear": 0.33,
+        "mar": 0.0,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-27 16:07:48",
+        "type": "EYES CLOSED",
+        "ear": 0.2,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:08:12",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:08:25",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:08:30",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:08:45",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 16:09:09",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 21:42:39",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 21:42:44",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 21:44:07",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 21:44:12",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-27 21:44:23",
+        "type": "YAWN",
+        "ear": 0.42,
+        "mar": 0.8,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-27 21:44:28",
+        "type": "YAWN",
+        "ear": 0.45,
+        "mar": 0.67,
+        "head": "Up"
+    },
+    {
+        "time": "2026-05-27 21:44:44",
+        "type": "DROWSINESS",
+        "ear": 0.33,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-27 21:50:07",
+        "type": "DISTRACTED",
+        "ear": 0.46,
+        "mar": 0.01,
+        "head": "Left"
+    },
+    {
+        "time": "2026-05-29 21:34:19",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:35:29",
+        "type": "EYES CLOSED",
+        "ear": 0.24,
+        "mar": 0.01,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-29 21:35:47",
+        "type": "DROWSINESS",
+        "ear": 0.37,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:36:02",
+        "type": "EYES CLOSED",
+        "ear": 0.23,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-29 21:36:47",
+        "type": "YAWN",
+        "ear": 0.41,
+        "mar": 0.64,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-29 21:37:17",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.06,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:37:23",
+        "type": "DROWSINESS",
+        "ear": 0.42,
+        "mar": 0.01,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:37:29",
+        "type": "DROWSINESS",
+        "ear": 0.45,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:37:37",
+        "type": "DROWSINESS",
+        "ear": 0.39,
+        "mar": 0.02,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:38:14",
+        "type": "DISTRACTED",
+        "ear": 0.43,
+        "mar": 0.01,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-29 21:39:56",
+        "type": "DROWSINESS",
+        "ear": 0.46,
+        "mar": 0.05,
+        "head": "Down"
+    },
+    {
+        "time": "2026-05-29 21:42:22",
+        "type": "DISTRACTED",
+        "ear": 0.51,
+        "mar": 0.0,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-29 21:42:43",
+        "type": "DISTRACTED",
+        "ear": 0.29,
+        "mar": 0.11,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-29 21:42:48",
+        "type": "DISTRACTED",
+        "ear": 0.5,
+        "mar": 0.03,
+        "head": "Right"
+    },
+    {
+        "time": "2026-05-31 11:13:19",
+        "type": "YAWN",
+        "ear": 0.31,
+        "mar": 0.58,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-31 11:28:26",
+        "type": "EYES CLOSED",
+        "ear": 0.22,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-31 11:28:33",
+        "type": "YAWN",
+        "ear": 0.32,
+        "mar": 0.55,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-31 21:18:08",
+        "type": "YAWN",
+        "ear": 0.4,
+        "mar": 0.53,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-31 21:18:17",
+        "type": "YAWN",
+        "ear": 0.39,
+        "mar": 0.55,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-05-31 21:18:22",
+        "type": "DROWSINESS",
+        "ear": 0.38,
+        "mar": 0.03,
+        "head": "Down"
+    },
+    {
+        "time": "2026-06-01 23:32:03",
+        "type": "YAWN",
+        "ear": 0.39,
+        "mar": 0.5,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-01 23:32:08",
+        "type": "YAWN",
+        "ear": 0.38,
+        "mar": 0.49,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-01 23:32:17",
+        "type": "YAWN",
+        "ear": 0.36,
+        "mar": 0.5,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-01 23:32:27",
+        "type": "DISTRACTED",
+        "ear": 0.29,
+        "mar": 0.08,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-01 23:32:32",
+        "type": "DISTRACTED",
+        "ear": 0.41,
+        "mar": 0.08,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-01 23:32:41",
+        "type": "EYES CLOSED",
+        "ear": 0.21,
+        "mar": 0.0,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-01 23:32:50",
+        "type": "YAWN",
+        "ear": 0.28,
+        "mar": 0.76,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-06 19:52:45",
+        "type": "YAWN",
+        "ear": 0.4,
+        "mar": 0.49,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-06 19:52:50",
+        "type": "DROWSINESS",
+        "ear": 0.43,
+        "mar": 0.15,
+        "head": "Down"
+    },
+    {
+        "time": "2026-06-06 19:52:56",
+        "type": "DISTRACTED",
+        "ear": 0.36,
+        "mar": 0.17,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-06 19:53:01",
+        "type": "DISTRACTED",
+        "ear": 0.37,
+        "mar": 0.27,
+        "head": "Left"
+    },
+    {
+        "time": "2026-06-06 19:53:10",
+        "type": "YAWN",
+        "ear": 0.31,
+        "mar": 0.62,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-06 19:53:17",
+        "type": "YAWN",
+        "ear": 0.27,
+        "mar": 0.57,
+        "head": "Forward"
+    },
+    {
+        "time": "2026-06-16 09:43:49",
+        "type": "DROWSINESS",
+        "ear": 0.44,
+        "mar": 0.04,
+        "head": "Down"
     }
 ]

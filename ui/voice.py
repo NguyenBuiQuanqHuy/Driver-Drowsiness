@@ -22,7 +22,7 @@ class Voice:
         if self.is_speaking:
             return False
 
-        if current_time - self.last_speak_time < 5:
+        if current_time - self.last_speak_time < 3.5:
             return False
 
         self.last_speak_time = current_time

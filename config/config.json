@@ -21,7 +21,7 @@
         "drowsy_time": 1.5
     },
     "mouth": {
-        "mar_threshold": 0.88,
+        "mar_threshold": 0.45,
         "yawn_time": 1.5
     },
     "head": {

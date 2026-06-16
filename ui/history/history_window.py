@@ -16,7 +16,7 @@ class HistoryWindow(QWidget):
         self.filter_type = QComboBox()
         self.filter_type.addItems([
             "ALL",
-            "MICROSLEEP",
+            "DROWSINESS",
             "EYES CLOSED",
             "YAWN",
             "DISTRACTED"
@@ -158,7 +158,7 @@ class HistoryWindow(QWidget):
             # ===== highlight theo loại =====
             alert_type = item.get("type", "")
 
-            if alert_type == "MICROSLEEP":
+            if alert_type == "DROWSINESS":
                 color = "#e74c3c"
                 text_color = "white"
             elif alert_type == "EYES CLOSED":

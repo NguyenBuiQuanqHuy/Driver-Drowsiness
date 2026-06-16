@@ -70,7 +70,9 @@ class SettingsDialog(QDialog):
             f"Down: {config['head']['down_threshold']}\n"
             f"Up: {config['head']['up_threshold']}\n"
             f"Left: {config['head']['left_threshold']}\n"
-            f"Right: {config['head']['right_threshold']}"
+            f"Right: {config['head']['right_threshold']}\n"
+            f"Drowsiness Time: {config['time']['microsleep_time']}\n"
+            f"Distracted Time: {config['time']['distracted_time']}"
         )
 
         info_label = QLabel(info_text)
